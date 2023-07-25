@@ -20,13 +20,19 @@ name:               gloss-raster-massiv
 -- PVP summary:     +-+------- breaking API changes
 --                  | | +----- non-breaking API additions
 --                  | | | +--- code changes with no API change
-version:            0.1.0.1
+version:            0.1.0.2
 
 -- A short (one-line) description of the package.
-synopsis: Massiv-based alternative for gloss-raster
+synopsis:           Massiv-based alternative for gloss-raster
 
 -- A longer description of the package.
-description: This library utilizes massiv's superb performance characteristics to supply alternative rasterization functionality to that which is provided by the gloss-raster package.
+description:        This library utilizes massiv's superb performance characteristics to supply alternative rasterization functionality to that which is provided by the gloss-raster package.
+
+-- Package homepage.
+homepage:           https://github.com/Matthew-Mosior/gloss-raster-massiv
+
+-- Issue tracker.
+bug-reports:        https://github.com/Matthew-Mosior/gloss-raster-massiv/issues
 
 -- The license under which the package is released.
 license:            BSD-3-Clause

@@ -8,3 +8,7 @@
 
 * Updated version 0.1.0.0 release date.
 * Added makeFrame function in Graphics.Gloss.Raster.Array to module exports.
+
+## 0.1.0.2 -- 2023-07-25
+
+* Added homepage and bug-reports fields to the cabal file.
