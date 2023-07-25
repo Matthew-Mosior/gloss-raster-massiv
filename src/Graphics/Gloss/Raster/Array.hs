@@ -25,6 +25,7 @@ module Graphics.Gloss.Raster.Array ( -- * Graphics.Gloss.Raster.Array Replacemen
                                      playArrayMassiv,
                                      animateArrayMassivIO,
                                      playArrayMassivIO,
+                                     makeFrame,
                                      sizeOfDisplay 
                                    ) where
 
