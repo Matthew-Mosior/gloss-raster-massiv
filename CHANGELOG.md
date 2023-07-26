@@ -12,3 +12,11 @@
 ## 0.1.0.2 -- 2023-07-25
 
 * Added homepage and bug-reports fields to the cabal file.
+
+## 0.1.0.3 -- 2023-07-25
+
+* Fixed bug with makeFrame function in Graphics.Gloss.Raster.Array.
+
+## 0.1.0.4 -- 2023-07-25
+
+* Removed extraneous print statement in makeFrame function in Graphics.Gloss.Raster.Array.
