@@ -188,17 +188,19 @@ makeFrame (scaleX,scaleY) !array
         -- Define the image, and extract out just the RGB color components.
         -- We don't need the alpha because we're only drawing one image.
         traceEventIO "Gloss.Raster.Massiv[makeFrame]: start frame evaluation."
-        let arrRGB = DMA.map convColor array :: Array DMA.D Ix2 Word32
+        (arrRGB :: Array DMA.S Ix2 Word32) <- DMA.traversePrim (\x -> return $ convColor x) array
         traceEventIO "Gloss.Raster.Massiv[makeFrame]: done, returning picture."
 
+        let arrRGBC = unsafeCoerce arrRGB :: Array DMA.S Ix2 Word8
+        let arrRGBCFP = (\(a,_) -> a) $
+                        DMAU.unsafeArrayToForeignPtr arrRGBC
         -- Wrap the ForeignPtr from the Array as a gloss picture.
         let picture
                 = Scale (fromIntegral scaleX) (fromIntegral scaleY)
                 $ bitmapOfForeignPtr
                         sizeX sizeY     -- raw image size
                         (BitmapFormat BottomToTop PxABGR)
-                        ((\(a,_) -> a) $ DMAU.unsafeArrayToForeignPtr $ (unsafeCoerce arrRGB :: Array DMA.S Ix2 Word8)) 
-                                        -- the image data.
+                        arrRGBCFP       -- the image data.
                         False           -- don't cache this in texture memory.
 
         return picture
