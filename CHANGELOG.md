@@ -20,3 +20,11 @@
 ## 0.1.0.4 -- 2023-07-25
 
 * Removed extraneous print statement in makeFrame function in Graphics.Gloss.Raster.Array.
+
+## 0.1.1.4 -- 2023-08-04
+
+* Added Graphics.Gloss.Raster.Field.
+
+## 0.1.1.5 -- 2023-08-04
+
+* Fixed RGBTriplet(..) doc link.

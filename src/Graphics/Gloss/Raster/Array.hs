@@ -7,7 +7,6 @@
 {-# LANGUAGE PatternGuards                               #-}
 {-# LANGUAGE ScopedTypeVariables                         #-}
 {-# LANGUAGE TypeApplications                            #-}
-{-# OPTIONS_GHC -fplugin=Foreign.Storable.Generic.Plugin #-}
 
 -- |
 -- Module      :  Graphics.Gloss.Raster.Array

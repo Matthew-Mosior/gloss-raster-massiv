@@ -38,6 +38,7 @@
 
 module Graphics.Gloss.Raster.Massiv.Internal ( -- * Graphics.Gloss.Raster.Array Replacement functions - INTERNAL
                                                ColorMassiv(..),
+                                               RGBTriplet(..),
                                                rgbMassiv,
                                                rgbMassivI,
                                                rgbMassiv8w,
@@ -86,6 +87,12 @@ instance Num ColorMassiv where
  {-# INLINE fromInteger #-}
 
 instance GStorable ColorMassiv
+
+-- | Custom data type for makeFrame function in @"Graphics.Gloss.Raster.Field"@.
+data RGBTriplet = RGBTriplet Word8 Word8 Word8
+  deriving (Show,Eq,Data,Generic,Typeable)
+
+instance GStorable RGBTriplet
 
 -- | Make a custom color. All components are clamped to the range  [0..1].
 makeColorMassiv :: Float        -- ^ Red component.

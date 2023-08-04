@@ -20,7 +20,7 @@ name:               gloss-raster-massiv
 -- PVP summary:     +-+------- breaking API changes
 --                  | | +----- non-breaking API additions
 --                  | | | +--- code changes with no API change
-version:            0.1.0.4
+version:            0.1.1.5
 
 -- A short (one-line) description of the package.
 synopsis:           Massiv-based alternative for gloss-raster
@@ -66,6 +66,7 @@ library
 
     -- Modules exported by the library.
     exposed-modules:  Graphics.Gloss.Raster.Array,
+                      Graphics.Gloss.Raster.Field,
                       Graphics.Gloss.Raster.Massiv.Internal
 
     -- Modules included in this library but not exported.
